@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github++",
+  "description": "Make simple changes to how github looks and feels.",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*", "https://github.etsycorp.com/*"],
+      "js": ["jquery.js", "jquery-ui.js", "gist.js", "gh++.js"]
+    }
+  ]
+}
